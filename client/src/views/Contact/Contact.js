@@ -2,9 +2,11 @@ import React from "react";
 import './contact.css'
 import om from '../Contact/om.jpg'
 import chetna from '../Contact/chetna.jpg'
-import nidhi from '../Contact/nidhi.jpg'
 import harshal from '../Contact/harshal.jpg'
 import avinash from '../Contact/avinashj.jpg'
+import sadanand from '../Contact/sadanand.jpg'
+import vikrant from '../Contact/vikrant.jpg'
+import ph from '../Contact/ph.jpg'
 import facebook from '../Contact/facebook.png'
 import twitter from '../Contact/twitter.png'
 import team from '../Contact/team.png'
@@ -74,7 +76,7 @@ export default function ContactUs() {
                                     </div>
 
                                     <div className='text-box-2'>
-                                        <img src={nidhi}
+                                        <img src={ph}
                                             alt='nidhi' className='user-2'>
                                         </img>
                                         <h6>Nidhi jangde</h6>
@@ -140,8 +142,8 @@ export default function ContactUs() {
 
                     <div className="card-container">
                         <div className="card-1" >
-                            <img src={nidhi}
-                                alt='nidhi' className='user-6'>
+                            <img src={ph}
+                                alt='ph' className='user-6'>
                             </img>
                             <div className="card-body">
                                 <h6 className="card-text-1">Nidhi Jangde</h6>
@@ -167,7 +169,7 @@ export default function ContactUs() {
                         </img>
                         <div className="card-body">
                             <h6 className="card-text-1">Harshal Kawadse</h6>
-                            <p className="education">BE Computer</p>
+                            <p className="education">BE IT</p>
                             <p className='description-5'>Fullstack Developer</p>
                         </div>
                     </div>
@@ -184,15 +186,37 @@ export default function ContactUs() {
                         </div>
 
                         <div className="card-1" >
-                            <img src={avinash}
-                                alt='avinash' className='user-6'>
-                            </img>
-                            <div className="card-body">
-                                <h6 className="card-text-1">Avinash Jadhav</h6>
-                                <p className="education">TE Computer</p>
-                                <p className='description-5'>Fullstack Developer</p>
-                            </div>
+                        <img src={sadanand}
+                            alt='sadanand' className='user-6'>
+                        </img>
+                        <div className="card-body">
+                            <h6 className="card-text-1">Sadanand Gurude</h6>
+                            <p className="education">BE entc</p>
+                            <p className='description-5'>Fullstack Developer</p>
                         </div>
+                    </div>
+
+                   < div className="card-1" >
+                        <img src={avinash}
+                            alt='avinash' className='user-6'>
+                        </img>
+                        <div className="card-body">
+                            <h6 className="card-text-1">Avinash Jadhav</h6>
+                            <p className="education">TE Computer</p>
+                            <p className='description-5'>Fullstack Developer</p>
+                        </div>
+                    </div>
+
+                    < div className="card-1" >
+                        <img src={vikrant}
+                            alt='avinash' className='user-6'>
+                        </img>
+                        <div className="card-body">
+                            <h6 className="card-text-1">Vikrant Patil</h6>
+                            <p className="education">Btech AI</p>
+                            <p className='description-5'>Fullstack Developer</p>
+                        </div>
+                    </div>
 
 
                     </div>
