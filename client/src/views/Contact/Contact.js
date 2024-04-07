@@ -3,6 +3,7 @@ import './contact.css'
 import om from '../Contact/om.jpg'
 import chetna from '../Contact/chetna.jpg'
 import nidhi from '../Contact/nidhi.jpg'
+import harshal from '../Contact/harshal.jpg'
 import avinash from '../Contact/avinashj.jpg'
 import facebook from '../Contact/facebook.png'
 import twitter from '../Contact/twitter.png'
@@ -159,6 +160,17 @@ export default function ContactUs() {
                                 <p className='description-5'>Fullstack Developer</p>
                             </div>
                         </div>
+
+                        <div className="card-1" >
+                        <img src={harshal}
+                            alt='harshal' className='user-6'>
+                        </img>
+                        <div className="card-body">
+                            <h6 className="card-text-1">Harshal Kawadse</h6>
+                            <p className="education">BE Computer</p>
+                            <p className='description-5'>Fullstack Developer</p>
+                        </div>
+                    </div>
 
                         <div className="card-1" >
                             <img src={chetna}
