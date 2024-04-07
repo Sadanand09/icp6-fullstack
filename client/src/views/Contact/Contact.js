@@ -21,10 +21,10 @@ export default function ContactUs() {
     return (
         <>
             <Navbar />
-            <div>
-                <div className='container'>
+            <div className="">
+                <div className='container mt-5'>
 
-                    <p className='title'>CONTACT US</p>
+                    <p className='title '>CONTACT US</p>
                     <p className='title-text'>Our team of customer care ninjas is ready to hear from you.</p>
                     <hr></hr>
 
