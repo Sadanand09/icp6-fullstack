@@ -1,44 +1,71 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { auth } from "../../views/Login/config";
 
 export default function Navbar() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged(user => {
+      setUser(user);
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("email");
+    auth.signOut();
+  };
+
   return (
     <>
-      <nav className="navbar fixed-top  navbar-expand-lg  navbar-dark bg-info">
-  <div className="container-fluid">
-    <Link className="navbar-brand" to="/">Booking</Link>
+      <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-info">
+        <div className="container-fluid">
+          <Link className="navbar-brand" to="/">Booking</Link>
 
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to="/">Home</Link>
-        </li>
-        
-        <li className="nav-item dropdown">
-          <Link className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Booking
-          </Link>
-          <ul className="dropdown-menu">
-            <li><Link className="dropdown-item" to="/booking/1">Aeroplane</Link></li>
-            <li><hr className="dropdown-divider"/></li>
-            <li><Link className="dropdown-item" to="/booking/2">Train</Link></li>
-          </ul>
-        </li>
-        
-      </ul>
-      <form className="d-flex" >
-        
-      <Link to='/login' >
-      <button className="btn btn-info border text-white" type="submit">Login</button>
-      </Link>
-        
-      </form>
-    </div>
-  </div>
-</nav>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/contact">Contact Us</Link>
+              </li>
+
+              <li className="nav-item dropdown">
+                <Link className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Booking
+                </Link>
+                <ul className="dropdown-menu">
+                  <li><Link className="dropdown-item" to="/destination/1">Aeroplane</Link></li>
+                  <li><hr className="dropdown-divider" /></li>
+                  <li><Link className="dropdown-item" to="/destination/2">Train</Link></li>
+                </ul>
+              </li>
+
+            </ul>
+            {user ? (
+              <div className="d-flex align-items-center  ">
+                <Link to="/dashboard" className='text-decoration-none'>
+                  <img src={user.photoURL} alt="Profile" className="rounded-circle me-2" style={{ width: '32px', height: '32px' }} />
+                  <span className="text-white me-2">{user.displayName}</span>
+                </Link>
+                <button onClick={handleLogout} className="btn btn-info border text-white" type="button">Logout</button>
+              </div>
+            ) : (
+              <Link to='/login' className="text-decoration-none">
+                <button className="btn btn-info border text-white" type="button">Login</button>
+              </Link>
+            )}
+          </div>
+        </div>
+      </nav>
     </>
   )
 }
