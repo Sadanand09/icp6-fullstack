@@ -1,6 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import '../../src/Contact/Contact.css'
+import './contact.css'
+import axios from 'axios';
+import toast from 'react-hot-toast';
 import om from '../Contact/om.jpg'
 import chetna from '../Contact/chetna.jpg'
 import nidhi from '../Contact/nidhi.jpg'
