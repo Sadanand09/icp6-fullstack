@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios'; // Import axios for making HTTP requests
 import { auth } from "../../views/Login/config";
 
 export default function Navbar() {
@@ -15,9 +16,21 @@ export default function Navbar() {
     };
   }, []);
 
-  const handleLogout = () => {
-    localStorage.removeItem("email");
-    auth.signOut();
+  const handleLogout = async () => {
+    try {
+      
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/user/logout`,
+      { email: user.email });
+
+
+      localStorage.clear();
+
+      await auth.signOut();
+
+    } catch (error) {
+      console.error("Error logging out:", error);
+    
+    }
   };
 
   return (

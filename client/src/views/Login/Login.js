@@ -4,27 +4,46 @@ import img1 from './img3.png';
 import img2 from './img2.png';
 import { auth, provider } from "./config";
 import { signInWithPopup } from 'firebase/auth';
+import axios from 'axios';
 
 function Login() {
   const [value, setValue] = useState('');
   const [loggedIn, setLoggedIn] = useState(false);
 
+  // const [email, setEmail] = useState(localStorage.getItem("email"));
+  // const [userName, setUserName] = useState(localStorage.getItem("userName"));
+  // const [userPhoto, setPhotoURL] = useState(localStorage.getItem("userPhoto"));
+
   const handleLogin = () => {
-    signInWithPopup(auth, provider).then((data) => {
+    signInWithPopup(auth, provider).then(async (data) => {
       setValue(data.user.email);
       localStorage.setItem("email", data.user.email);
+      localStorage.setItem("userName", data.user.displayName);
+      localStorage.setItem("userPhoto", data.user.photoURL);
       setLoggedIn(true);
+  
+      // Send user data directly in the POST request
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/user`, {
+        email: data.user.email,
+        userName: data.user.displayName,
+        userPhoto: data.user.photoURL
+      });
+  
+      console.log('User Data Recorded:', response.data);
     });
-  }
+  };
+  
 
   useEffect(() => {
     setValue(localStorage.getItem("email"));
   }, []);
 
   console.log(value);
+  
 
   if (loggedIn) {
-    return <Navigate to="/" replace={true} />; 
+    return <Navigate to="/dashboard" replace={true} />; 
+    // window.location.href = '/'
     
   }
 
