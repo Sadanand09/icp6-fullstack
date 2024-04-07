@@ -23,7 +23,6 @@ function Home() {
       <HeroAero/>
       <Features/>
       <Globe/>
-
       <AdvertiseVdo/>
       <Statistics/>
       <Footer/>
