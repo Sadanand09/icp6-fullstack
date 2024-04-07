@@ -1,156 +1,173 @@
 .title {
-    font-size: 30px;
+    font-size: 50px;
     text-align: center;
-    margin-top: 5px;
+    margin-top: 20px;
     margin-bottom: -2px;
+    padding-top: 28px;
 
 }
 
 .title-text {
     text-align: center;
-    font-size: 10px;
+    font-size: 20px;
 
 }
 
 .heading {
-    font-size: 20px;
-
+    font-size: 35px;
     margin-bottom: 2px;
+    text-align: start;
 }
 
 .description {
-    font-size: 10px;
+    font-size: 20px;
+
 
 }
 
 .input-1 {
-    font-size: 12px;
-    padding: 2px 70px;
+    font-size: 25px;
+    padding: 5px 110px;
 
 }
 
 .input-2 {
-    font-size: 12px;
-    padding: 2px 70px;
+    font-size: 25px;
+    padding: 5px 110px;
     margin-top: 13px;
 }
 
 .input-3 {
-    font-size: 12px;
-    padding: 2px 70px;
+    font-size: 25px;
+    padding: 5px 110px;
     margin-top: 13px;
 }
 
 .input-4 {
-    font-size: 12px;
-    padding: 30px 70px;
+    font-size: 25px;
+    padding: 40px 110px;
     margin-top: 13px;
 }
 
-
-
-
+.btn {
+    margin-top: 20px;
+    width: 110px;
+    padding: 17px 50px;
+    margin-left: 340px;
+}
 
 .heading-1 {
-    font-size: 20px;
-
+    font-size: 35px;
     margin-bottom: 2px;
+    text-align: start;
+    margin-top: 20px;
 }
 
 .description-1 {
-    font-size: 9px;
+    font-size: 20px;
 }
-
 
 
 .user-1 {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     float: left;
-   margin-right: 15px;
+    margin-right: 15px;
 
 }
 
 
 
-.text-box h6{
-    font-size: 15px;
+.text-box h6 {
+    font-size: 24px;
     margin-bottom: -2px;
 }
-.text-box p{
-    font-size: 8px;
+
+.text-box p {
+    font-size: 15px;
     color: rgb(33, 148, 255);
-    
+
 }
 
 
 
 .user-2 {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     float: left;
-   margin-right: 15px;
-   
+    margin-right: 15px;
+    
+
 }
 
 
 
-.text-box-2 h6{
-    font-size: 15px;
+.text-box-2 h6 {
+    font-size: 24px;
     margin-bottom: -2px;
- 
+
 }
-.text-box-2 p{
-    font-size: 8px;
+
+.text-box-2 p {
+    font-size: 15px;
     color: rgb(33, 148, 255);
 }
 
-.heading-2{
-    font-size: 15px;
+.heading-2 {
+    font-size: 25px;
     margin-top: 25px;
 }
 
 .user-3 {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    float: left;
-   margin-right: 15px; 
-}
-.text-box-3 p{
-    font-size: 8px;
-}
-
-.user-4 {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;  
     float: left;
     margin-right: 15px;
 }
-.text-box-4 p{
-    font-size: 8px;
-   
+
+.text-box-3 p {
+    font-size: 15px;
 }
-.wrapper-5{
+
+.user-4 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 15px;
+}
+
+.text-box-4 p {
+    font-size: 15px;
+
+}
+ .about-head{
+    font-size: 50px;
+}
+.wrapper-5 {
     display: block;
 }
-.user-5{
-    width: 250px;
-   float: right;
-   margin-right: 60px;
-   margin-top: -20px;
+
+.user-5 {
+    width: 400px;
+    float: right;
+    margin-right: 150px;
+    margin-top: -20px;
 }
-.text-box-5 p{
-    font-size: 13px;
-    margin-top: 50px;
-    margin-left: 50px;
-}
-.team-title{
-    margin-top: 45px;
+
+.text-box-5 p {
     font-size: 20px;
+    margin-top: 50px;
+    margin-left: 150px;
+}
+
+.team-title {
+    margin-top: 50px;
+    padding-top: 50px;
+    font-size: 40px;
 }
 
 .card-container {
@@ -161,35 +178,38 @@
 }
 
 .card-1 {
-    width: 140px;
+    width: 240px;
     border: 1px solid black;
     margin-top: 25px;
     margin-bottom: 20px;
     border-radius: 20px;
-    margin-left: 35px;
+    margin-left: 70px;
 }
 
-.user-6{
-    width: 100px;
-    margin-left: 20px;
+.user-6 {
+    width: 170px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     margin-top: 10px;
     border-radius: 20px;
 }
 
-.card-text-1{
-   text-align: center;
-    font-size: 15px;
-    margin-top: 5px;
-}
-
-.education{
+.card-text-1 {
     text-align: center;
-    margin-top: -5px;
-    font-size: 13px;
+    font-size: 25px;
+    padding-top: 5px;
 }
 
-.description-5{
-font-size: 12px;
-margin-top: -15px;
-text-align: center;
+.education {
+    text-align: center;
+    padding-bottom: 2px;
+    font-size: 20px;
+}
+
+.description-5 {
+    font-size: 17px; 
+    text-align: center;
+    padding-bottom: 7px;
+    margin-top: -9px;
 }

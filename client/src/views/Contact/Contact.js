@@ -118,7 +118,7 @@ export default function ContactUs() {
                 <hr></hr>
 
                 <div>
-                    <h4 className='text-center'>About us</h4>
+                    <h4 className=' about-head text-center'>About us</h4>
 
                     <div className='wrapper-5'>
                         <div className='text-box-5'>
