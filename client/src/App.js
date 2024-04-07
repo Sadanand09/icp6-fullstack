@@ -25,7 +25,7 @@ function App() {
     },
 
     {
-      path: "/destination",
+      path: "/destination/:id",
       element: <Destination/>
     },
 
@@ -35,7 +35,7 @@ function App() {
     },
 
     {
-      path: "/booking/:id",
+      path: "/booking",
       element: <Booking/>
     },
 
