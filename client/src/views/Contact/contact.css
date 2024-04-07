@@ -1,0 +1,195 @@
+.title {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: -2px;
+
+}
+
+.title-text {
+    text-align: center;
+    font-size: 10px;
+
+}
+
+.heading {
+    font-size: 20px;
+
+    margin-bottom: 2px;
+}
+
+.description {
+    font-size: 10px;
+
+}
+
+.input-1 {
+    font-size: 12px;
+    padding: 2px 70px;
+
+}
+
+.input-2 {
+    font-size: 12px;
+    padding: 2px 70px;
+    margin-top: 13px;
+}
+
+.input-3 {
+    font-size: 12px;
+    padding: 2px 70px;
+    margin-top: 13px;
+}
+
+.input-4 {
+    font-size: 12px;
+    padding: 30px 70px;
+    margin-top: 13px;
+}
+
+
+
+
+
+.heading-1 {
+    font-size: 20px;
+
+    margin-bottom: 2px;
+}
+
+.description-1 {
+    font-size: 9px;
+}
+
+
+
+.user-1 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    float: left;
+   margin-right: 15px;
+
+}
+
+
+
+.text-box h6{
+    font-size: 15px;
+    margin-bottom: -2px;
+}
+.text-box p{
+    font-size: 8px;
+    color: rgb(33, 148, 255);
+    
+}
+
+
+
+.user-2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    float: left;
+   margin-right: 15px;
+   
+}
+
+
+
+.text-box-2 h6{
+    font-size: 15px;
+    margin-bottom: -2px;
+ 
+}
+.text-box-2 p{
+    font-size: 8px;
+    color: rgb(33, 148, 255);
+}
+
+.heading-2{
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+.user-3 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    float: left;
+   margin-right: 15px; 
+}
+.text-box-3 p{
+    font-size: 8px;
+}
+
+.user-4 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;  
+    float: left;
+    margin-right: 15px;
+}
+.text-box-4 p{
+    font-size: 8px;
+   
+}
+.wrapper-5{
+    display: block;
+}
+.user-5{
+    width: 250px;
+   float: right;
+   margin-right: 60px;
+   margin-top: -20px;
+}
+.text-box-5 p{
+    font-size: 13px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.team-title{
+    margin-top: 45px;
+    font-size: 20px;
+}
+
+.card-container{
+    display:flex;
+    justify-content:row;
+    margin-left: 20px;
+}
+
+.card-1{
+width: 140px;
+border: 1px solid black;
+margin-top: 25px;
+margin-bottom: 20px;
+position: relative;
+margin-right: 10px;
+border-radius: 20px;
+}
+
+.user-6{
+    width: 100px;
+    margin-left: 20px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+.card-text-1{
+   text-align: center;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.education{
+    text-align: center;
+    margin-top: -5px;
+    font-size: 13px;
+}
+
+.description-5{
+font-size: 12px;
+margin-left: 17px;
+margin-top: -15px;
+}

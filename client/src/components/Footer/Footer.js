@@ -11,7 +11,7 @@ export default function Footer() {
                     <div className="col ">
                         <Link to="/" className="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
                             <h4>Save on your plans!
-                                Select XYZ And Receive
+                                Select BOOKING And Receive
                                 our discounts by e-mail.</h4>
                         </Link>
                         {/* <p className="text-body-secondary">&copy; 2024</p> */}
