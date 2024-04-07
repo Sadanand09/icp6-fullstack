@@ -22,6 +22,36 @@ export default function Destination() {
                     <p>{booking.description}</p>
                 </div>
             </div>
+            <div className="container mt-3">
+      <div className="row justify-content-center">
+        <div className="col-md-11">
+          <div className="card border-primary">
+            <div className="card-body">
+              <h5 className="card-title text-center">Destination Input</h5>
+              <form>
+                <div className="row mb-3">
+                  <div className="col">
+                    <label htmlFor="fromInput" className="form-label">From:</label>
+                    <input type="text" className="form-control height" id="fromInput" placeholder="Enter origin" />
+                  </div>
+                  <div className="col">
+                    <label htmlFor="toInput" className="form-label">To:</label>
+                    <input type="text" className="form-control height" id="toInput" placeholder="Enter destination" />
+                  </div>
+                  <div className="col">
+                    <label htmlFor="dateInput" className="form-label">Date:</label>
+                    <input type="date" className="form-control height" id="dateInput" />
+                  </div>
+                </div>
+                <div className='text-center'>
+                <button type="submit" className="btn btn-primary w-75 text-center">Search</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
             <div className="container col-xxl-12 px-4 py-5  mx-auto">
                 <div className="mx-auto d-flex">
