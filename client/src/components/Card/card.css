@@ -1,5 +1,5 @@
 .image{
-    height:200px;
+    height:190px;
 }
 .width{
     width:390px;
@@ -14,4 +14,9 @@
 .card-title{
     font-size: 25px;
     font-weight: 400;
+}
+.place{
+    font-size: 15px;
+    color:rgb(119, 118, 118);
+    font-weight:300;
 }

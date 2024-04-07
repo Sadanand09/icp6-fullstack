@@ -62,19 +62,19 @@ export default function Destination() {
                 <div className="row d-flex justify-content-center">
                     {
                         id === '1' && Infoplane.map((info, index) => {
-                            const { img, country, description, price } = info;
+                            const { img, country,place, description, price } = info;
                             return (
                                 <div key={index} className="col-md-4 mb-3 d-flex">
-                                    <Card img={img} country={country} description={description} price={price} />
+                                    <Card img={img} country={country} place={place} description={description} price={price} />
                                 </div>)
                         })
                     }
                     {
                         id === '2' && Infotrain.map((info, index) => {
-                            const { img, country, description, price } = info;
+                            const { img, country,place, description, price } = info;
                             return (
                                 <div key={index} className="col-md-4 mb-3 d-flex">
-                                    <Card img={img} country={country} description={description} price={price} />
+                                    <Card img={img} country={country} place={place} description={description} price={price} />
                                 </div>)
                         })
 
@@ -86,7 +86,7 @@ export default function Destination() {
                 <div className="mx-auto d-flex">
                     <div className="col-10 col-sm-8 col-lg-8 border rounded-2 p-3">
                         <h2>{booking.title}</h2>
-                        <p>{booking.description}</p>
+                        <p>{booking.details}</p>
                         <p>Booking ID: {booking.id}</p>
                     </div>
                     <div>
