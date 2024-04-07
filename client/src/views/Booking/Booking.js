@@ -114,6 +114,8 @@ function Booking() {
   )
 }
 
+export default Booking
+
 
 // import React from 'react';
 // import { useParams } from 'react-router-dom';
