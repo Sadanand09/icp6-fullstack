@@ -1,38 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Navigate } from 'react-router-dom'; 
 import img1 from './img3.png';
 import img2 from './img2.png';
-// import firebase from 'firebase/app';
-// import 'firebase/auth';
-
-// Your Firebase configuration
-// const firebaseConfig = {
-//   apiKey: "YOUR_API_KEY",
-//   authDomain: "YOUR_AUTH_DOMAIN",
-//   projectId: "YOUR_PROJECT_ID",
-//   storageBucket: "YOUR_STORAGE_BUCKET",
-//   messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-//   appId: "YOUR_APP_ID"
-// };
-
-// Initialize Firebase
-// if (!firebase.apps.length) {
-//   firebase.initializeApp(firebaseConfig);
-// }
+import { auth, provider } from "./config";
+import { signInWithPopup } from 'firebase/auth';
 
 function Login() {
+  const [value, setValue] = useState('');
+  const [loggedIn, setLoggedIn] = useState(false);
 
-  // const handleGoogleSignIn = async () => {
-  //   const provider = new firebase.auth.GoogleAuthProvider();
-  //   try {
-  //     const result = await firebase.auth().signInWithPopup(provider);
-  //     // You can access the user's information here
-  //     const user = result.user;
-  //     console.log(user);
-  //   } catch (error) {
-  //     // Handle errors here
-  //     console.error(error);
-  //   }
-  // };
+  const handleLogin = () => {
+    signInWithPopup(auth, provider).then((data) => {
+      setValue(data.user.email);
+      localStorage.setItem("email", data.user.email);
+      setLoggedIn(true);
+    });
+  }
+
+  useEffect(() => {
+    setValue(localStorage.getItem("email"));
+  }, []);
+
+  console.log(value);
+
+  if (loggedIn) {
+    return <Navigate to="/" replace={true} />; 
+    
+  }
 
   return (
     <>
@@ -47,7 +41,7 @@ function Login() {
           <div className="col-md-10 mx-auto col-lg-5">
             <form className="p-3 p-md-5 border rounded-3 bg-body-tertiary">
             <img src={img2} alt='img' style={{ height: "164px" }} />
-              <button className="w-75 mx-auto btn border-info mt-2 btn-md border d-flex " type="button">
+              <button onClick={handleLogin} className="w-75 mx-auto btn border-info mt-2 btn-md border d-flex " type="button">
                 <img className="icon mx-3 " src="https://cdn-icons-png.flaticon.com/128/300/300221.png" alt="Google Icon" style={{ height: "24px" }} />
                 Sign in with Google
               </button>
@@ -58,6 +52,7 @@ function Login() {
           </div>
         </div>
       </div>
+      
     </>
   )
 }
