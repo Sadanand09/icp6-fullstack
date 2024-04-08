@@ -24,7 +24,10 @@ export default function HeroAero() {
                                 <Link to="/destination/2">
                                     <button type="button" className="btn btn-outline-info btn-lg px-4 me-md-2">Book Flight</button>
                                 </Link>
-                                <button type="button" className="btn btn-outline-secondary btn-lg px-4">Default</button>
+                                <Link to="/contact">
+                                <button type="button" className="btn btn-outline-secondary btn-lg px-4">Contact Us</button>
+                                </Link>
+                               
                             </div>
                         </div>
                     </div>
