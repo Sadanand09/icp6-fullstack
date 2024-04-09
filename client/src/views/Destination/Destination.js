@@ -29,7 +29,7 @@ export default function Destination() {
                     <div className="col-md-11">
                         <div className="card border-primary">
                             <div className="card-body">
-                                <h5 className="card-title text-center">Destination Input</h5>
+                                <h5 className="card-title text-center text-info-emphasis">Destination Input</h5>
                                 <form>
                                     <div className="row mb-3">
                                         <div className="col">
@@ -55,10 +55,10 @@ export default function Destination() {
                 </div>
             </div>
             <div className="mt-5 text-center">
-                <h2 className="mt-5">Top {booking.transport} Deals From India:</h2>
+                <h2 className="mt-5  text-info-emphasis">Top {booking.transport} Deals From India:</h2>
             </div>
 
-            <div className="container mt-3">
+            <div className="container mt-3 ml-5">
                 <div className="row d-flex justify-content-center">
                     {
                         id === '1' && Infoplane.map((info, index) => {
@@ -85,8 +85,8 @@ export default function Destination() {
             <div className="container col-xxl-12 px-4 py-5  mx-auto">
                 <div className="mx-auto d-flex">
                     <div className="col-10 col-sm-8 col-lg-8 border rounded-2 p-3">
-                        <h2>{booking.title}</h2>
-                        <p>{booking.details}</p>
+                        <h2 className=' text-info-emphasis'>{booking.title}</h2>
+                        <p className='lh-base details'>{booking.details}</p>
                     </div>
                     <div>
                         <img src={booking.img} alt="Transport" className="img-fluid rounded-2 border" />
