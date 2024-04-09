@@ -14,8 +14,8 @@ function Card(props) {
         <p className='place'>{place}</p>
        
         <p className="date">{date}</p>
-        <p className='describe mt-4 mb-1'>{description}</p>
-        <button className='btn btn-outline-info mybtn'>{price}</button>
+        <p className='describe mt-4 mb-1 fw-semibold'>{description}</p>
+        <button className='btn btn-outline-info mybtn '>{price}</button>
       </div>
     </div>
     );

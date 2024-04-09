@@ -17,7 +17,7 @@ const Infoplane=[
         place:"Thailand",
         date:"Sun, 26 May",
         price:"Book Now",
-        description:"Best deal for now"
+        description:"₹ 17000"
     },
     {
         img:img2,
@@ -25,7 +25,7 @@ const Infoplane=[
         place:"Singapore",
         date:"Thu, 23 May",
         price:"Book Now",
-        description:"Best deal for now" 
+        description:"₹19,000" 
     },
     {
         img:img3,
@@ -33,7 +33,7 @@ const Infoplane=[
         place:"Nepal",
         date:"Fri, 26 Apr",
         price:"Book Now",
-        description:"Best deal for now"
+        description:"₹ 20,000"
     },
     {
         img:img7,
@@ -41,7 +41,7 @@ const Infoplane=[
         place:"Sri Lanka",
         date:"Sat, 18 May",
         price:"Book Now",
-        description:"Best deal for now"
+        description:"₹ 14,000"
 
     },
     {
@@ -50,7 +50,7 @@ const Infoplane=[
         place:"Oman",
         date:"Mon, 15 Apr",
         price:"Book Now",
-        description:"Best deal for now"
+        description:"₹ 13,000"
     },
     {
         img:img9,
@@ -58,7 +58,7 @@ const Infoplane=[
         place:"Vietnam",
         date:"Tue, 09 Jul",
         price:"Book Now",
-        description:"Best deal for now"
+        description:"₹ 18,000"
     }
 ]
 const Infotrain=[
@@ -68,7 +68,7 @@ const Infotrain=[
         place:"Assam",
         date:"Mon, 08 Jul",
         price:"Book Now",
-        description:"Best deal for now"
+        description:"₹ 7000"
 
     },
     {
@@ -77,7 +77,7 @@ const Infotrain=[
         place:"Jammu-Kashmir",
         date:"Thu, 25 Apr",
         price:"Book Now",
-        description:"Best deal for now"
+        description:"₹ 5000"
 
     },
     {
@@ -86,7 +86,7 @@ const Infotrain=[
         place:"Rajasthan",
         date:"Fri, 12 Apr",
         price:"Book Now",
-        description:"Best deal for now"
+        description:"₹ 1500"
 
     },
     {
@@ -96,7 +96,7 @@ const Infotrain=[
         place:"Punjab",
         date:"Tue, 07 May",
         price:"Book Now",
-        description:"Best deal for now"
+        description:"₹ 2000"
     },
     {
         
@@ -105,7 +105,7 @@ const Infotrain=[
         place:"Himachal Pradesh",
         date:"Sat, 25 May",
         price:"Book Now",
-        description:"Best deal for now"
+        description:"₹ 3000"
     },
     {
         
@@ -114,7 +114,7 @@ const Infotrain=[
         place:"Tamil Nadu",
         date:"Wed, 24 Apr",
         price:"Book Now",
-        description:"Best deal for now"
+        description:"₹ 5000"
     }
 ]
 
