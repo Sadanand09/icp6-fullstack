@@ -77,13 +77,13 @@ function Dashboard() {
       </div>
 
 <div>
-  hello this is your Flights
   <Flightdetails
-  flightname=""
-  departurestation=""
-  departuretime=""
-  arrivalStation=""
-  arrivaltime=""
+  flightname="Air India"
+  departurestation="JFK"
+  departuretime="13:00"
+  arrivalStation="Bombay"
+  arrivaltime="15:20"
+  Ticketprice="$1300"
   />
 </div>
       </div>

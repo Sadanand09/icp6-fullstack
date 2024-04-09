@@ -8,7 +8,7 @@ import Arrow from './../../arrow.png'
 import './flightdetails.css' 
 
 const flightdetails = (props) =>{
-   const {flightname,departurestation,departuretime , arrivaltime, arrivalStation} = props;
+   const {flightname,departurestation,departuretime , arrivaltime, arrivalStation,Ticketprice} = props;
    
   return (
     <div>
@@ -32,7 +32,7 @@ const flightdetails = (props) =>{
           <p className='flight-time'>{arrivaltime}</p>
         </p>
         <p>
-          $1300
+         {Ticketprice}
         </p>
         <button className='cancel-btn' onClick={'dleteFlight'} > ✖ Cancel</button>
       </div>
