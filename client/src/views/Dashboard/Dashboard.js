@@ -1,7 +1,8 @@
 import React from 'react'
 import './dashboard.css'
+import { Link } from 'react-router-dom';
 import Footer from '../../components/Footer/Footer.js'
-import flightdetails from "./components/flightdetails/flightdetails";
+import Flightdetails from './../Dashboard/components/flightdetails/flightdetails.js'
 import Navbar from '../../components/Navbar/Navbar.js';
 
 
@@ -75,14 +76,16 @@ function Dashboard() {
         <h4 className='subheading3'>✈ Current Flights ✈</h4>
       </div>
 
-< flightdetails 
-departurestation="JKF" 
-departureTime = "14:00"
-arrivalStation = "BOMB"
-arrivaltime = " 18:20"
-
-
-/>
+<div>
+  hello this is your Flights
+  <Flightdetails
+  flightname=""
+  departurestation=""
+  departuretime=""
+  arrivalStation=""
+  arrivaltime=""
+  />
+</div>
       </div>
 
 
@@ -90,7 +93,8 @@ arrivaltime = " 18:20"
       <div className='flight-image'>
         <h1 className='subheading'>Add More Flights..</h1>
         <p className='subheading1'>Travel More And Keep Shinig...</p>
-        <button className='Add-btn  '>Book Now</button>
+        <button className='Add-btn  '>
+        <Link className="nav-link active" aria-current="page" to="/Booking">Book Now</Link></button>
       </div>
       <Footer />
     </div>
