@@ -1,10 +1,13 @@
 .image{
     height:190px;
 }
-.width{
+.mycard{
     width:390px;
     transition: box-shadow 0.3s ease;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position:relative;
+    height: 600px;
+
 }
 .width:hover{
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -19,4 +22,22 @@
     font-size: 15px;
     color:rgb(119, 118, 118);
     font-weight:300;
+    position: absolute;
+    left:50px;
+    bottom:49px;
+}
+.date{
+    position:absolute;
+    left:300px;
+    bottom:85px;
+
+
+}
+.logo{
+    height:20px;
+}
+.mybtn{
+    position:absolute;
+    left:295px;
+    bottom: 10px;
 }

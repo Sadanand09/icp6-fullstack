@@ -46,7 +46,7 @@ export default function Destination() {
                                         </div>
                                     </div>
                                     <div className='text-center'>
-                                        <button type="submit" className="btn btn-primary w-75 text-center">Search</button>
+                                        <button type="submit" className="btn btn-info w-75 text-center">Search</button>
                                     </div>
                                 </form>
                             </div>
@@ -62,19 +62,19 @@ export default function Destination() {
                 <div className="row d-flex justify-content-center">
                     {
                         id === '1' && Infoplane.map((info, index) => {
-                            const { img, country,place, description, price } = info;
+                            const { img, country,place, date, price,description } = info;
                             return (
                                 <div key={index} className="col-md-4 mb-3 d-flex">
-                                    <Card img={img} country={country} place={place} description={description} price={price} />
+                                    <Card img={img} country={country} place={place} date={date} price={price} description={description} />
                                 </div>)
                         })
                     }
                     {
                         id === '2' && Infotrain.map((info, index) => {
-                            const { img, country,place, description, price } = info;
+                            const { img, country,place, date, price,description } = info;
                             return (
                                 <div key={index} className="col-md-4 mb-3 d-flex">
-                                    <Card img={img} country={country} place={place} description={description} price={price} />
+                                    <Card img={img} country={country} place={place} date={date} price={price} description={description} />
                                 </div>)
                         })
 
@@ -87,7 +87,6 @@ export default function Destination() {
                     <div className="col-10 col-sm-8 col-lg-8 border rounded-2 p-3">
                         <h2>{booking.title}</h2>
                         <p>{booking.details}</p>
-                        <p>Booking ID: {booking.id}</p>
                     </div>
                     <div>
                         <img src={booking.img} alt="Transport" className="img-fluid rounded-2 border" />
