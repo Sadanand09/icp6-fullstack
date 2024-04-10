@@ -1,20 +1,16 @@
 import React from 'react'
 import './dashboard.css'
+import { Link } from 'react-router-dom';
 import Footer from '../../components/Footer/Footer.js'
-import user from './../Dashboard/profile.png';
-import airline1 from './../Dashboard/airline1.png';
-import airline2 from './../Dashboard/airline2.png';
-import airline3 from './../Dashboard/airline3.png';
-import airline4 from './../Dashboard/airline4.png';
-import Arrow from './../Dashboard/arrow.png'
+import Flightdetails from './../Dashboard/components/flightdetails/flightdetails.js'
 import Navbar from '../../components/Navbar/Navbar.js';
+
 
 function Dashboard() {
 
   const name = localStorage.getItem("userName");
   const email = localStorage.getItem("email");
   const profile = localStorage.getItem("userPhoto");
-
 
   //Random Phone Number
   function generateRandomMobileNumber() {
@@ -51,6 +47,8 @@ function Dashboard() {
   
   const randomBirthdate = generateRandomBirthdate();
 
+  // flight details
+  
   return (
 
     <div>
@@ -74,105 +72,20 @@ function Dashboard() {
         </p>
       </div>
       <div>
+      <div>
         <h4 className='subheading3'>✈ Current Flights ✈</h4>
       </div>
-      <div className='flight-card'>
-        <p>
-          <img src={airline1} className='flight-logo' />
-          <h4>Air India</h4>
-        </p>
-        <p>
-          <p className='station-name'>JFK</p>
-          <p className='flight-time'>13:00</p>
-        </p>
-        <p>
-          <p className='middle-para'>Air India</p>
-          <p className='middle-para'>Non-Stop</p>
-          <img src={Arrow}  className='arrow'/>
-        </p>
-        <p>
-          <p className='station-name'>BOM</p>
-          <p className='flight-time'>14:20</p>
-        </p>
-        <p>
-          $1300
-        </p>
-        <button className='cancel-btn' onClick={'CancelFlight'} > ✖ Cancel</button>
-      </div>
 
-
-      <div className='flight-card'>
-        <p>
-        <img src={airline2} className='flight-logo ' />
-        <h4>IndiGo</h4>
-        </p>
-        <p>
-          <p className='station-name'>JFK</p>
-          <p className='flight-time'>13:00</p>
-        </p>
-        <p>
-          <p className='middle-para'>IndiGo</p>
-          <p className='middle-para'>Non-Stop</p>
-          <img src={Arrow}  className='arrow'/>
-        </p>
-        <p>
-          <p className='station-name'>BOM</p>
-          <p className='flight-time'>14:20</p>
-        </p>
-        <p>
-          $1450
-        </p>
-        <button className='cancel-btn' onClick={'CancelFlight'} >✖ Cancel</button>
-      </div>
-
-
-      <div className='flight-card'>
-        <p>
-        <img src={airline3} className='flight-logo' />
-        <h4>Spice jet</h4>
-        </p>
-        <p>
-          <p className='station-name'>JFK</p>
-          <p className='flight-time'>13:00</p>
-        </p>
-        <p>
-          <p className='middle-para'>Spice jet</p>
-          <p className='middle-para'>Non-Stop</p>
-          <img src={Arrow}  className='arrow'/>
-        </p>
-        <p>
-          <p className='station-name'>BOM</p>
-          <p className='flight-time'>14:20</p>
-        </p>
-        <p>
-          $2000
-        </p>
-        <button className='cancel-btn' onClick={'CancelFlight'}> ✖ Cancel</button>
-      </div>
-
-
-      <div className='flight-card'>
-        <p>
-        <img src={airline4} className='flight-logo' />
-        <h4>Vistara</h4>
-        </p>
-        <p>
-          <p className='station-name'>JFK</p>
-          <p className='flight-time'>13:00</p>
-        </p>
-        <p>
-          <p className='middle-para'>Vistara</p>
-          <p className='middle-para'>Non-Stop</p>
-          <img src={Arrow}  className='arrow'/>
-        </p>
-        <p>
-          <p className='station-name'>BOM</p>
-          <p className='flight-time'>14:20</p>
-        </p>
-        <p>
-          $2300
-        </p>
-        <button className='cancel-btn' onClick={'CancelFlight'} > ✖ Cancel</button>
+<div>
+  <Flightdetails
+  flightname="Air India"
+  departurestation="JFK"
+  departuretime="13:00"
+  arrivalStation="Bombay"
+  arrivaltime="15:20"
+  Ticketprice="$1300"
+  />
+</div>
       </div>
 
 
@@ -180,7 +93,8 @@ function Dashboard() {
       <div className='flight-image'>
         <h1 className='subheading'>Add More Flights..</h1>
         <p className='subheading1'>Travel More And Keep Shinig...</p>
-        <button className='Add-btn  '>Book Now</button>
+        <button className='Add-btn  '>
+        <Link className="nav-link active" aria-current="page" to="/Booking">Book Now</Link></button>
       </div>
       <Footer />
     </div>
