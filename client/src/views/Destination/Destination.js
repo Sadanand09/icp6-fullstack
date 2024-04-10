@@ -29,7 +29,7 @@ export default function Destination() {
                     <div className="col-md-11">
                         <div className="card border-primary">
                             <div className="card-body">
-                                <h5 className="card-title text-center">Destination Input</h5>
+                                <h5 className="card-title text-center text-info-emphasis">Destination Input</h5>
                                 <form>
                                     <div className="row mb-3">
                                         <div className="col">
@@ -46,7 +46,7 @@ export default function Destination() {
                                         </div>
                                     </div>
                                     <div className='text-center'>
-                                        <button type="submit" className="btn btn-primary w-75 text-center">Search</button>
+                                        <button type="submit" className="btn btn-info w-75 text-center">Search</button>
                                     </div>
                                 </form>
                             </div>
@@ -55,26 +55,26 @@ export default function Destination() {
                 </div>
             </div>
             <div className="mt-5 text-center">
-                <h2 className="mt-5">Top {booking.transport} Deals From India:</h2>
+                <h2 className="mt-5  text-info-emphasis">Top {booking.transport} Deals From India:</h2>
             </div>
 
-            <div className="container mt-3">
+            <div className="container mt-3 ml-5">
                 <div className="row d-flex justify-content-center">
                     {
                         id === '1' && Infoplane.map((info, index) => {
-                            const { img, country,place, description, price } = info;
+                            const { img, country,place, date, price,description } = info;
                             return (
                                 <div key={index} className="col-md-4 mb-3 d-flex">
-                                    <Card img={img} country={country} place={place} description={description} price={price} />
+                                    <Card img={img} country={country} place={place} date={date} price={price} description={description} />
                                 </div>)
                         })
                     }
                     {
                         id === '2' && Infotrain.map((info, index) => {
-                            const { img, country,place, description, price } = info;
+                            const { img, country,place, date, price,description } = info;
                             return (
                                 <div key={index} className="col-md-4 mb-3 d-flex">
-                                    <Card img={img} country={country} place={place} description={description} price={price} />
+                                    <Card img={img} country={country} place={place} date={date} price={price} description={description} />
                                 </div>)
                         })
 
@@ -85,9 +85,8 @@ export default function Destination() {
             <div className="container col-xxl-12 px-4 py-5  mx-auto">
                 <div className="mx-auto d-flex">
                     <div className="col-10 col-sm-8 col-lg-8 border rounded-2 p-3">
-                        <h2>{booking.title}</h2>
-                        <p>{booking.details}</p>
-                        <p>Booking ID: {booking.id}</p>
+                        <h2 className=' text-info-emphasis'>{booking.title}</h2>
+                        <p className='lh-base details'>{booking.details}</p>
                     </div>
                     <div>
                         <img src={booking.img} alt="Transport" className="img-fluid rounded-2 border" />

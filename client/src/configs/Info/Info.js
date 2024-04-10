@@ -15,44 +15,50 @@ const Infoplane=[
         img:img1,
         country:"Bangkok",
         place:"Thailand",
-        description:"Best Package to Bangkok",
-        price:"₹1200"
+        date:"Sun, 26 May",
+        price:"Book Now",
+        description:"₹ 17000"
     },
     {
         img:img2,
         country:"Singapore",
         place:"Singapore",
-        description:"Best Package to Si",
-        price:"₹1200" 
+        date:"Thu, 23 May",
+        price:"Book Now",
+        description:"₹19,000" 
     },
     {
         img:img3,
         country:"Katmandu",
         place:"Nepal",
-        description:"Best Package to Bangkok",
-        price:"₹1200"
+        date:"Fri, 26 Apr",
+        price:"Book Now",
+        description:"₹ 20,000"
     },
     {
         img:img7,
         country:"Colombo",
         place:"Sri Lanka",
-        description:"Best Package to Bangkok",
-        price:"₹1200"
+        date:"Sat, 18 May",
+        price:"Book Now",
+        description:"₹ 14,000"
 
     },
     {
         img:img8,
         country:"Muscat",
         place:"Oman",
-        description:"Best Package to Bangkok",
-        price:"₹1200"
+        date:"Mon, 15 Apr",
+        price:"Book Now",
+        description:"₹ 13,000"
     },
     {
         img:img9,
         country:"Hanoi",
         place:"Vietnam",
-        description:"Best Package to Bangkok",
-        price:"₹1200"
+        date:"Tue, 09 Jul",
+        price:"Book Now",
+        description:"₹ 18,000"
     }
 ]
 const Infotrain=[
@@ -60,24 +66,27 @@ const Infotrain=[
         img:img4,
         country:"Guwahati",
         place:"Assam",
-        description:"Best package to Guwahati.",
-        price:"₹1200"
+        date:"Mon, 08 Jul",
+        price:"Book Now",
+        description:"₹ 7000"
 
     },
     {
         img:img5,
         country:"Srinagar",
         place:"Jammu-Kashmir",
-        description:"Best Package to Bangkok",
-        price:"₹1200"
+        date:"Thu, 25 Apr",
+        price:"Book Now",
+        description:"₹ 5000"
 
     },
     {
         img:img6,
         country:"Jaipur",
         place:"Rajasthan",
-        description:"Best Package to Bangkok",
-        price:"₹1200"
+        date:"Fri, 12 Apr",
+        price:"Book Now",
+        description:"₹ 1500"
 
     },
     {
@@ -85,24 +94,27 @@ const Infotrain=[
         img:img10,
         country:"Amritsar",
         place:"Punjab",
-        description:"Best Package to Bangkok",
-        price:"₹1200"
+        date:"Tue, 07 May",
+        price:"Book Now",
+        description:"₹ 2000"
     },
     {
         
         img:img11,
         country:"Shimla",
         place:"Himachal Pradesh",
-        description:"Best Package to Bangkok",
-        price:"₹1200"
+        date:"Sat, 25 May",
+        price:"Book Now",
+        description:"₹ 3000"
     },
     {
         
         img:img12,
         country:"Kanyakumari",
         place:"Tamil Nadu",
-        description:"Best Package to Bangkok",
-        price:"₹1200"
+        date:"Wed, 24 Apr",
+        price:"Book Now",
+        description:"₹ 5000"
     }
 ]
 
