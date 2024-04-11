@@ -38,19 +38,19 @@ export default function Destination() {
                 <div className="row d-flex justify-content-center">
                     {
                         id === '1' && Infoplane.map((info, index) => {
-                            const { img, country,place, date, price,description } = info;
+                            const { img, country,place, date, price,description,id } = info;
                             return (
                                 <div key={index} className="col-md-4 mb-3 d-flex">
-                                    <Card img={img} country={country} place={place} date={date} price={price} description={description} />
+                                    <Card img={img} country={country} place={place} date={date} price={price} description={description}  id={id}/>
                                 </div>)
                         })
                     }
                     {
                         id === '2' && Infotrain.map((info, index) => {
-                            const { img, country,place, date, price,description } = info;
+                            const { img, country,place, date, price,description,id } = info;
                             return (
                                 <div key={index} className="col-md-4 mb-3 d-flex">
-                                    <Card img={img} country={country} place={place} date={date} price={price} description={description} />
+                                    <Card img={img} country={country} place={place} date={date} price={price} description={description} id={id}/>
                                 </div>)
                         })
 
