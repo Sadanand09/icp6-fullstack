@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import toast from 'react-hot-toast';
+import { Link,Navigate } from 'react-router-dom';
 
 function BookingForm(props) {
 
@@ -9,9 +11,12 @@ function BookingForm(props) {
     const [from, setFrom] = useState('');
     const [to, setTo] = useState('');
     const [date, setDate] = useState('');
+    const [redirect, setRedirect] = useState(false);
 
-    const submitHandler=(event)=>{
+
+    const submitHandler= async (event)=>{
       event.preventDefault();
+      await bookTicket();
 
     }
 
@@ -24,47 +29,60 @@ function BookingForm(props) {
             date:date
           });
           console.log(response.data);
-          alert(response.data.message);
-          setFrom('');
-          setTo('');
-          setDate('');
+          toast.success(response.data.message);
+          setRedirect(true);
+          resetForm();
         } catch (error) {
           console.error('Error:', error);
+          toast.error('Failed to search Train');
         }
       };
       const bookPlane = async () => {
         console.log("Attempting to book plane ticket...");
         try {
           const response = await axios.post(`${process.env.REACT_APP_API_URL}/book-plane-ticket`, {
-            from:from,
-            to:to,
-            date:date
+            from: from,
+            to: to,
+            date: date
           });
           console.log(response.data);
-          alert(response.data.message);
-          setFrom('');
-          setTo('');
-          setDate('');
+          toast.success(response.data.message);
+          setRedirect(true);
+          resetForm();
         } catch (error) {
           console.error('Error:', error);
+          toast.error('Failed to search Plane');
         }
       };
         
-      const bookTicket = () => {
+      const bookTicket = async () => {
         console.log("Received id:", id);
+        try{
     if (id === 1) {
           console.log("Booking plane ticket...");
-          bookPlane();
+          await bookPlane();
         } else if (id === 2) {
           console.log("Booking train ticket...");
-          bookTrain();
+          await bookTrain();
         } else {
           console.error('Invalid id');
         }
+      }catch (error) {
+        console.error('Error:', error);
+        toast.error('Failed to book ticket');
+      }
+      };
+
+      const resetForm = () => {
+        setFrom('');
+        setTo('');
+        setDate('');
       };
 
    
 return (
+  <>
+  {redirect && <Navigate to="/timeslot"></Navigate>}
     <div className="container mt-3">
         <div className="row justify-content-center">
             <div className="col-md-11">
@@ -87,14 +105,16 @@ return (
                                 </div>
                             </div>
                             <div className='text-center'>
-                                <button type="button" className="btn btn-info w-75 text-center" onClick={bookTicket}>Search</button>
+                                <button type="submit" className="btn btn-info w-75 text-center" onClick={bookTicket} >Search</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+        
     </div>
+    </>
 );
 }
 
