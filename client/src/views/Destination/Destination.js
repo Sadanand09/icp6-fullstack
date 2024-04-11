@@ -5,6 +5,8 @@ import './destination.css';
 import Card from '../../components/Card/Card';
 import { Infoplane, Infotrain } from '../../configs/Info/Info';
 import BookingForm from '../../components/BookingForm/BookingForm';
+import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer'
 
 
 export default function Destination() {
@@ -18,7 +20,8 @@ export default function Destination() {
 
     return (
         <div>
-            <div className="container-fluid p-0 position-relative ">
+            <Navbar></Navbar>
+            <div className="container-fluid p-0 position-relative mt-5">
                 <img src={booking.poster} alt="Poster " className="img-fluid w-100 " style={{ height: '570px', filter: 'brightness(70%)' }} />
                 <div className="position-absolute top-0 start-50 mt-5 translate-middle-x text-center text-white">
                     <h1 className="mb-4">{booking.tag}</h1>
@@ -66,6 +69,8 @@ export default function Destination() {
                     </div>
                 </div>
             </div>
+
+            <Footer></Footer>
 
         </div>
     );
