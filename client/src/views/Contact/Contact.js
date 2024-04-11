@@ -65,7 +65,7 @@ export default function ContactUs() {
 
 
                                         <input type='text' placeholder='Enter your message' className='input-4 rounded' onChange={(e) => setMessage(e.target.value)} ></input><br></br>
-                                        <button type="button" onClick={handleSubmit} class="btn btn-outline-info btn-md mt-3">Summit</button>
+                                        <button type="button" onClick={handleSubmit} class="btn btn-outline-info btn-md mt-3">Submit</button>
                                     </form>
                                 </div>
                             </div>
@@ -218,6 +218,17 @@ export default function ContactUs() {
                         <div className="card-body">
                             <h6 className="card-text-1">Avinash Jadhav</h6>
                             <p className="education">TE Computer</p>
+                            <p className='description-5'>Fullstack Developer</p>
+                        </div>
+                    </div>
+
+                    < div className="card-1" >
+                        <img src={vikrant}
+                            alt='avinash' className='user-6'>
+                        </img>
+                        <div className="card-body">
+                            <h6 className="card-text-1">Vikrant Patil</h6>
+                            <p className="education">Btech AI</p>
                             <p className='description-5'>Fullstack Developer</p>
                         </div>
                     </div>
