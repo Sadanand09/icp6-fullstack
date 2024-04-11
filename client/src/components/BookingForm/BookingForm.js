@@ -16,9 +16,14 @@ function BookingForm(props) {
 
     const submitHandler= async (event)=>{
       event.preventDefault();
+
+      if (!from || !to || !date) {
+        toast.error('Please fill in all details');
+        return;
+    }
       await bookTicket();
 
-    }
+    };
 
     const bookTrain = async () => {
       console.log("Attempting to book train ticket...");
@@ -29,9 +34,15 @@ function BookingForm(props) {
             date:date
           });
           console.log(response.data);
+          if (!from || !to || !date) {
+            toast.error('Please fill in all details');
+            setRedirect(false);
+            return;
+        }else{
           toast.success(response.data.message);
           setRedirect(true);
           resetForm();
+        }
         } catch (error) {
           console.error('Error:', error);
           toast.error('Failed to search Train');
@@ -46,9 +57,15 @@ function BookingForm(props) {
             date: date
           });
           console.log(response.data);
+          if (!from || !to || !date) {
+            toast.error('Please fill in all details');
+            setRedirect(false);
+            return;
+        }else{
           toast.success(response.data.message);
           setRedirect(true);
           resetForm();
+        }
         } catch (error) {
           console.error('Error:', error);
           toast.error('Failed to search Plane');

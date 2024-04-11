@@ -40,8 +40,10 @@ export default function Destination() {
                         id === '1' && Infoplane.map((info, index) => {
                             const { img, country,place, date, price,description,id } = info;
                             return (
-                                <div key={index} className="col-md-4 mb-3 d-flex">
-                                    <Card img={img} country={country} place={place} date={date} price={price} description={description}  id={id}/>
+                                <div key={index} className="col-md-4 mb-3  d-flex">
+                                
+                                    <Card img={img} country={country} place={place} date={date} price={price} description={description}  id={parseInt(id)}/>
+                
                                 </div>)
                         })
                     }
@@ -50,7 +52,7 @@ export default function Destination() {
                             const { img, country,place, date, price,description,id } = info;
                             return (
                                 <div key={index} className="col-md-4 mb-3 d-flex">
-                                    <Card img={img} country={country} place={place} date={date} price={price} description={description} id={id}/>
+                                    <Card img={img} country={country} place={place} date={date} price={price} description={description} id={parseInt(id)}/>
                                 </div>)
                         })
 
@@ -65,7 +67,7 @@ export default function Destination() {
                         <p className='lh-base details'>{booking.details}</p>
                     </div>
                     <div>
-                        <img src={booking.img} alt="Transport" className="img-fluid rounded-2 border" />
+                        <img src={booking.img} alt="Transport" className="img-fluid rounded-2 border transport-img" />
                     </div>
                 </div>
             </div>
