@@ -9,6 +9,7 @@ import avinash from '../Contact/avinashj.jpg'
 import sadanand from '../Contact/sadanand.jpg'
 import vikrant from '../Contact/vikrant.jpg'
 import ph from '../Contact/ph.jpg'
+import user from '../Contact/user.png'
 import facebook from '../Contact/facebook.png'
 import twitter from '../Contact/twitter.png'
 import team from '../Contact/team.png'
@@ -65,7 +66,7 @@ export default function ContactUs() {
 
 
                                         <input type='text' placeholder='Enter your message' className='input-4 rounded' onChange={(e) => setMessage(e.target.value)} ></input><br></br>
-                                        <button type="button" onClick={handleSubmit} class="btn btn-outline-info btn-md mt-3">Summit</button>
+                                        <button type="button" onClick={handleSubmit} class="btn btn-outline-info btn-md mt-3">Submit</button>
                                     </form>
                                 </div>
                             </div>
@@ -228,6 +229,17 @@ export default function ContactUs() {
                         </img>
                         <div className="card-body">
                             <h6 className="card-text-1">Vikrant Patil</h6>
+                            <p className="education">Btech AI</p>
+                            <p className='description-5'>Fullstack Developer</p>
+                        </div>
+                    </div>
+
+                    < div className="card-1" >
+                        <img src={user}
+                            alt='user' className='user-6'>
+                        </img>
+                        <div className="card-body">
+                            <h6 className="card-text-1">kiran</h6>
                             <p className="education">Btech AI</p>
                             <p className='description-5'>Fullstack Developer</p>
                         </div>
