@@ -4,6 +4,9 @@ import bookingData from '../../configs/Booking/Transport.json';
 import './destination.css';
 import Card from '../../components/Card/Card';
 import { Infoplane, Infotrain } from '../../configs/Info/Info';
+import BookingForm from '../../components/BookingForm/BookingForm';
+import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer'
 
 
 export default function Destination() {
@@ -17,43 +20,16 @@ export default function Destination() {
 
     return (
         <div>
-            <div className="container-fluid p-0 position-relative ">
+            <Navbar></Navbar>
+            <div className="container-fluid p-0 position-relative mt-5">
                 <img src={booking.poster} alt="Poster " className="img-fluid w-100 " style={{ height: '570px', filter: 'brightness(70%)' }} />
                 <div className="position-absolute top-0 start-50 mt-5 translate-middle-x text-center text-white">
                     <h1 className="mb-4">{booking.tag}</h1>
                     <p>{booking.description}</p>
                 </div>
             </div>
-            <div className="container mt-3">
-                <div className="row justify-content-center">
-                    <div className="col-md-11">
-                        <div className="card border-primary">
-                            <div className="card-body">
-                                <h5 className="card-title text-center text-info-emphasis">Destination Input</h5>
-                                <form>
-                                    <div className="row mb-3">
-                                        <div className="col">
-                                            <label htmlFor="fromInput" className="form-label">From:</label>
-                                            <input type="text" className="form-control height" id="fromInput" placeholder="Enter origin" />
-                                        </div>
-                                        <div className="col">
-                                            <label htmlFor="toInput" className="form-label">To:</label>
-                                            <input type="text" className="form-control height" id="toInput" placeholder="Enter destination" />
-                                        </div>
-                                        <div className="col">
-                                            <label htmlFor="dateInput" className="form-label">Date:</label>
-                                            <input type="date" className="form-control height" id="dateInput" />
-                                        </div>
-                                    </div>
-                                    <div className='text-center'>
-                                        <button type="submit" className="btn btn-info w-75 text-center">Search</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <BookingForm  id={parseInt(booking.id)}></BookingForm>
+            
             <div className="mt-5 text-center">
                 <h2 className="mt-5  text-info-emphasis">Top {booking.transport} Deals From India:</h2>
             </div>
@@ -93,6 +69,8 @@ export default function Destination() {
                     </div>
                 </div>
             </div>
+
+            <Footer></Footer>
 
         </div>
     );
