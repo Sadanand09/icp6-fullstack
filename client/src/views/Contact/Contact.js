@@ -9,12 +9,14 @@ import avinash from '../Contact/avinashj.jpg'
 import sadanand from '../Contact/sadanand.jpg'
 import vikrant from '../Contact/vikrant.jpg'
 import ph from '../Contact/ph.jpg'
-import user from '../Contact/user.png'
+// import user from '../Contact/user.png'
+import user from "./user.jpg"
 import facebook from '../Contact/facebook.png'
 import twitter from '../Contact/twitter.png'
 import team from '../Contact/team.png'
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+// import
 
 
 
