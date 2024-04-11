@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import RightArrow from './right-arrow.png'
 import "./TrainDetails.css";
+import { Link } from 'react-router-dom';
 
 const TrainDetails = (props) => {
     const { trainName, runsOn, departureStation, departureTime, departureDate, arrivalStation, arrivalTime, arrivalDate } = props;
+
+
+
   return (
     <div className=" container container-1 shadow p-3 mb-5 bg-body-tertiary rounded">
         <div className="train-info">
@@ -27,7 +31,7 @@ const TrainDetails = (props) => {
               <p>{arrivalDate}</p>
             </p>
           </div>
-          <button type="button" class="book-train-btn">Book Train</button>
+          <Link to="/booking" className="book-train-btn">Book Train</Link>
 
         </div>
       </div>

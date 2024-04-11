@@ -4,6 +4,7 @@ import bookingData from '../../configs/Booking/Transport.json';
 import './destination.css';
 import Card from '../../components/Card/Card';
 import { Infoplane, Infotrain } from '../../configs/Info/Info';
+import { Link } from 'react-router-dom';
 
 
 export default function Destination() {
@@ -18,7 +19,8 @@ export default function Destination() {
     return (
         <div>
             <div className="container-fluid p-0 position-relative ">
-                <img src={booking.poster} alt="Poster " className="img-fluid w-100 " style={{ height: '570px', filter: 'brightness(70%)' }} />
+                <img src={booking.poster} 
+                alt="Poster " className="img-fluid w-100 " style={{ height: '570px', filter: 'brightness(70%)' }} />
                 <div className="position-absolute top-0 start-50 mt-5 translate-middle-x text-center text-white">
                     <h1 className="mb-4">{booking.tag}</h1>
                     <p>{booking.description}</p>
@@ -46,7 +48,8 @@ export default function Destination() {
                                         </div>
                                     </div>
                                     <div className='text-center'>
-                                        <button type="submit" className="btn btn-info w-75 text-center">Search</button>
+                                        <Link to="/timeslot" className="btn btn-info w-75 text-center">Search</Link>
+
                                     </div>
                                 </form>
                             </div>
