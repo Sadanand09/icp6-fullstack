@@ -323,7 +323,7 @@ app.post("/book-train-ticket", async (req, res) => {
 
   res.json({
     success: true,
-    message: "Searching Trains on this route",
+    message: " Trains for this route",
     data: newBooking,
   });
 })
@@ -350,7 +350,7 @@ app.post("/book-plane-ticket", async (req, res) => {
 
   res.json({
     success: true,
-    message: "Seraching Flights for this route",
+    message: " Flights for this route",
     data: newBooking,
   });
 })

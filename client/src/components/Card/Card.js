@@ -1,16 +1,27 @@
 import React from 'react';
 import './card.css';
-import logo from './airplane.png'
+import airplanelogo from './airplane.png';
+import trainlogo from './train.png';
 
 
 function Card(props) {
-    const {img,country,place,date,price,description}=props;
+    const {img,country,place,date,price,description,id}=props;
+    let logo;
+      if(id===1){
+        logo=airplanelogo
+      ;
+      }
+      else if(id===2) {
+         logo=trainlogo;
+      }
+
   return (
     <div className="card mycard shadow-md ">
-      <img src={img} className="card-img-top image" alt="Card image cap" />
+      <img src={img} className="card-img-top image" alt="Card  cap" />
       <div className="card-body">
         <h1 className="card-title">{country}</h1>
-        <img src={logo} className='logo'></img>
+        
+        <img src={logo} className='logo' ></img>
         <p className='place'>{place}</p>
        
         <p className="date">{date}</p>
