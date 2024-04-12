@@ -16,6 +16,7 @@ import twitter from '../Contact/twitter.png'
 import team from '../Contact/team.png'
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import Features from "../../components/Features/Features";
 // import
 
 
@@ -250,6 +251,8 @@ export default function ContactUs() {
 
                     </div>
                 </div>
+
+                <Features/>
             </div>
             <Footer />
         </>

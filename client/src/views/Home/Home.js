@@ -19,7 +19,7 @@ function Home() {
       <Navbar/>
       <Carousel/>
       <Transport/>
-      {/* <Preloader/> */}
+      <Preloader/>
       <HeroTrain/>
       <HeroAero/>
       <Features/>
