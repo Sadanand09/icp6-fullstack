@@ -31,7 +31,7 @@ export default function ContactUs() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const response = await axios.post(`${process.env.REACT_APP_API_URL}/contact`,{
+        const response = await axios.post(`${process.env.REACT_APP_API_URL}/contact`, {
             name, phone, email, message
         });
 
@@ -43,119 +43,85 @@ export default function ContactUs() {
         <>
             <Navbar />
             <div className="">
-                <div className='container mt-5'>
+            <div className='container mt-5'>
+    <p className='title'>CONTACT US</p>
+    <p className='title-text'>Our team of customer care ninjas is ready to hear from you.</p>
+    <hr />
 
-                    <p className='title '>CONTACT US</p>
-                    <p className='title-text'>Our team of customer care ninjas is ready to hear from you.</p>
-                    <hr></hr>
+    <div className='row justify-content-evenly'>
+        <div className='col-lg-5 col-md-6 col-sm-12'>
+            <div className='text-start'>
+                <p className='heading'>Reach out to us!</p>
+                <p className='description'>Ready to hear from You💌</p>
+                <form>
+                    <input type='text' placeholder='Enter your name' className='input-1 rounded' onChange={(e) => setName(e.target.value)} />
+                    <input type='text' placeholder='Enter your email' className='input-2 rounded mt-3' onChange={(e) => setEmail(e.target.value)} />
+                    <input type='text' placeholder='Enter your contact no' className='input-3 rounded mt-3' onChange={(e) => setPhone(e.target.value)} />
+                    <input type='text' placeholder='Enter your message' className='input-4 rounded mt-3' onChange={(e) => setMessage(e.target.value)} />
+                    <button type="button" onClick={handleSubmit} className="btn btn-outline-info btn-md mt-3">Submit</button>
+                </form>
+            </div>
+        </div>
 
-                    <div>
-                        <div class="row justify-content-evenly">
+        <div className='col-lg-5 col-md-6 col-sm-12'>
+            <p className='heading-1'>Customer Care</p>
+            <p className="description-1">Our team of customer care ninjas is ready to hear from you.</p>
 
-                            <div class="col-5 text-start">
-                                <p className="heading"> Reach out to us!</p>
-                                <p className="description">Ready to hear from You💌</p>
+            <div className='wrapper'>
+                <div className='text-box'>
+                    <img src={om} alt='Om' className='user-1' />
+                    <div className="">
 
-                                <div>
-                                    <form>
-
-                                        <input type='text' placeholder='Enter your name' className='input-1 rounded' onChange={(e) => setName(e.target.value)}></input>
-
-
-                                        <input type='text' placeholder='Enter your email' className='input-2 rounded' onChange={(e) => setEmail(e.target.value)}></input>
-
-
-                                        <input type='text' placeholder='Enter your contact no' className='input-3 rounded' onChange={(e) => setPhone(e.target.value)}></input>
-
-
-                                        <input type='text' placeholder='Enter your message' className='input-4 rounded' onChange={(e) => setMessage(e.target.value)} ></input><br></br>
-                                        <button type="button" onClick={handleSubmit} class="btn btn-outline-info btn-md mt-3">Submit</button>
-                                    </form>
-                                </div>
-                            </div>
-
-
-
-
-                            <div class="col-5 text-start">
-
-                                <p className='heading-1' >Customer Care</p>
-                                <p className="description-1">Our team of customer care ninjas is ready to hear from you.</p>
-
-
-                                <div className='wrapper'>
-                                    <div className='text-box'>
-                                        <img src={om}
-                                            alt='Om' className='user-1'>
-                                        </img>
-                                        <h6>Om nandurkar</h6>
-                                        <p >Customer Care<br></br>
-                                            +91 **********14
-                                        </p>
-                                    </div>
-
-                                    <div className='text-box-2'>
-                                        <img src={ph}
-                                            alt='nidhi' className='user-2'>
-                                        </img>
-                                        <h6>Nidhi jangde</h6>
-                                        <p >Customer Care<br></br>
-                                            +91 **********88
-                                        </p>
-
-                                    </div>
-                                </div>
-
-                                <p className='heading-2' >Others ways to connect</p>
-
-                                <div className='wrapper'>
-                                    <div className='text-box-3'>
-                                        <img src={facebook}
-                                            alt='facebook' className='user-3'>
-                                        </img>
-                                        <p> Be the first on your block get product updates,<br></br>
-                                            announcements, news and lots of realiy good content.
-                                            like us on facebook today!
-                                        </p>
-                                    </div>
-
-                                    <div className='text-box-3'>
-                                        <img src={twitter}
-                                            alt='twitter' className='user-4'>
-                                        </img>
-                                        <p> Where the best tips on conversion optimization, landing<br></br>
-                                            pages, content marketing SEO & SEM ?
-                                            follow us on twitter today at !
-                                        </p>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <h6>Om nandurkar</h6>
+                    <p>Customer Care<br />+91 **********14</p>
                     </div>
                 </div>
+
+                <div className='text-box'>
+                    <img src={ph} alt='nidhi' className='user-2' />
+                    <div className="">
+
+                    <h6>Nidhi jangde</h6>
+                    <p>Customer Care<br />+91 **********88</p>
+                    </div>
+                </div>
+            </div>
+
+            <p className='heading-2'>Others ways to connect</p>
+
+            <div className='wrapper'>
+                <div className='text-box-3'>
+                    <img src={facebook} alt='facebook' className='user-3' />
+                    <p>Be the first on your block get product updates,<br />announcements, news and lots of realiy good content. like us on facebook today!</p>
+                </div>
+
+                <div className='text-box-3'>
+                    <img src={twitter} alt='twitter' className='user-4' />
+                    <p>Where the best tips on conversion optimization, landing<br />pages, content marketing SEO & SEM? follow us on twitter today at!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
                 <hr></hr>
 
                 <div>
-                    <h4 className=' about-head text-center'>About us</h4>
+                    <div className="container">
+                        <h4 className='about-head text-center mt-4'>About us</h4>
 
-                    <div className='wrapper-5'>
-                        <div className='text-box-5'>
-                            <img src={team}
-                                alt='team' className='user-5'>
-                            </img>
-                            <p> 'Travel is the movement of people between distant <br></br>
-                                geographical locations.Travel can be done by  foot, bicycle,<br></br>
-                                automobile, train, boat, bus, airplane, <br></br>
-                                ship or other means, with or without luggage,<br></br>
-                                and can be one way or round trip.<br></br>
-                                Travel can also include relatively short
-                                stays between successive<br></br>
-                                movements, as in the case of tourism<br></br>
-                            </p>
+                        <div className='row justify-content-center'>
+                            <div className='col-lg-6 col-md-8 col-sm-10'>
+                                <div className='text-box-5 text-center'>
+                                    <img src={team} alt='team' className='user-5 img-fluid rounded'></img>
+                                    <p className="mt-3">
+                                        'Travel is the movement of people between distant geographical locations. Travel can be done by foot, bicycle, automobile, train, boat, bus, airplane, ship or other means, with or without luggage, and can be one way or round trip. Travel can also include relatively short stays between successive movements, as in the case of tourism.'
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-
                     </div>
+
 
                     <h6 className=' team-title text-center'> OUR TEAM</h6>
 
@@ -183,15 +149,15 @@ export default function ContactUs() {
                         </div>
 
                         <div className="card-1" >
-                        <img src={harshal}
-                            alt='harshal' className='user-6'>
-                        </img>
-                        <div className="card-body">
-                            <h6 className="card-text-1">Harshal Kawadse</h6>
-                            <p className="education">BE IT</p>
-                            <p className='description-5'>Fullstack Developer</p>
+                            <img src={harshal}
+                                alt='harshal' className='user-6'>
+                            </img>
+                            <div className="card-body">
+                                <h6 className="card-text-1">Harshal Kawadse</h6>
+                                <p className="education">BE IT</p>
+                                <p className='description-5'>Fullstack Developer</p>
+                            </div>
                         </div>
-                    </div>
 
                         <div className="card-1" >
                             <img src={chetna}
@@ -205,54 +171,54 @@ export default function ContactUs() {
                         </div>
 
                         <div className="card-1" >
-                        <img src={sadanand}
-                            alt='sadanand' className='user-6'>
-                        </img>
-                        <div className="card-body">
-                            <h6 className="card-text-1">Sadanand Gurude</h6>
-                            <p className="education">BE entc</p>
-                            <p className='description-5'>Fullstack Developer</p>
+                            <img src={sadanand}
+                                alt='sadanand' className='user-6'>
+                            </img>
+                            <div className="card-body">
+                                <h6 className="card-text-1">Sadanand Gurude</h6>
+                                <p className="education">BE entc</p>
+                                <p className='description-5'>Fullstack Developer</p>
+                            </div>
                         </div>
-                    </div>
 
-                   < div className="card-1" >
-                        <img src={avinash}
-                            alt='avinash' className='user-6'>
-                        </img>
-                        <div className="card-body">
-                            <h6 className="card-text-1">Avinash Jadhav</h6>
-                            <p className="education">TE Computer</p>
-                            <p className='description-5'>Fullstack Developer</p>
+                        < div className="card-1" >
+                            <img src={avinash}
+                                alt='avinash' className='user-6'>
+                            </img>
+                            <div className="card-body">
+                                <h6 className="card-text-1">Avinash Jadhav</h6>
+                                <p className="education">TE Computer</p>
+                                <p className='description-5'>Fullstack Developer</p>
+                            </div>
                         </div>
-                    </div>
 
-                    < div className="card-1" >
-                        <img src={vikrant}
-                            alt='avinash' className='user-6'>
-                        </img>
-                        <div className="card-body">
-                            <h6 className="card-text-1">Vikrant Patil</h6>
-                            <p className="education">Btech AI</p>
-                            <p className='description-5'>Fullstack Developer</p>
+                        < div className="card-1" >
+                            <img src={vikrant}
+                                alt='avinash' className='user-6'>
+                            </img>
+                            <div className="card-body">
+                                <h6 className="card-text-1">Vikrant Patil</h6>
+                                <p className="education">Btech AI</p>
+                                <p className='description-5'>Fullstack Developer</p>
+                            </div>
                         </div>
-                    </div>
 
-                    < div className="card-1" >
-                        <img src={user}
-                            alt='user' className='user-6'>
-                        </img>
-                        <div className="card-body">
-                            <h6 className="card-text-1">kiran</h6>
-                            <p className="education">Btech AI</p>
-                            <p className='description-5'>Fullstack Developer</p>
+                        < div className="card-1" >
+                            <img src={user}
+                                alt='user' className='user-6'>
+                            </img>
+                            <div className="card-body">
+                                <h6 className="card-text-1">kiran</h6>
+                                <p className="education">Btech AI</p>
+                                <p className='description-5'>Fullstack Developer</p>
+                            </div>
                         </div>
-                    </div>
 
 
                     </div>
                 </div>
 
-                <Features/>
+                <Features />
             </div>
             <Footer />
         </>
