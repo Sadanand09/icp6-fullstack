@@ -46,7 +46,7 @@ function Login() {
 
   if (loggedIn) {
     return <Navigate to="/dashboard" replace={true} />; 
-    // window.location.href = '/'
+    // windows.location.href("/")
     
   }
 
